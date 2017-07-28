@@ -1,0 +1,11 @@
+{
+    "houses": [
+        "NYC Apt.",
+        "Long Island House"
+    ],
+    "characteristics": {
+        "name": "Jimmy",
+        "weight": 180,
+        "niceperson": false
+    }
+}

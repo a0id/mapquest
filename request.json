@@ -1,0 +1,20 @@
+{
+    "locations": [
+        "Clarendon Blvd, Arlington, VA",
+        "2400 S Glebe Rd, Arlington, VA"
+    ],
+    "options": {
+        "avoids": [],
+        "avoidTimedConditions": false,
+        "doReverseGeocode": true,
+        "shapeFormat": "raw",
+        "generalize": 0,
+        "routeType": "fastest",
+        "timeType": 1,
+        "locale": "en_US",
+        "unit": "m",
+        "enhancedNarrative": false,
+        "drivingStyle": 2,
+        "highwayEfficiency": 21.0
+    }
+}
