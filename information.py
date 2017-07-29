@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json, requests
 class Info():
     def __init__(self, key):
@@ -5,7 +6,7 @@ class Info():
         self.endLoc = []
         self.key = key
         self.information = []
-        self.data = ""
+        self.data = None
         self.locData = ""
     def getInfo(self):
         with open('location.json') as data_file:
@@ -42,9 +43,12 @@ class Info():
         for x in range(len(self.data["incidents"])):
             accidents.append("Accident " + str(x+1) + ": " + self.data["incidents"][x]["shortDesc"])
         return accidents
-    def trafImage(self, accident):
+    def trafImage(self):
         request = (
-            "https://www.mapquestapi.com/traffic/v2/flow?key=" + self.key + "&mapLat=" + accident[0] + "&mapLng=" + accident[1] +"&mapHeight=400&mapWidth=400&mapScale=108335"
+            "https://www.mapquestapi.com/traffic/v2/flow?key=" + self.key + 
+            "&mapLat=" + self.information[3] + 
+            "&mapLng=" + self.information[4] +
+            "&mapHeight=400&mapWidth=400&mapScale=108335"
         )
         self.data = requests.get(request).json()
         return self.data
