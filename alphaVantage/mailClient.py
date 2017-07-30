@@ -9,7 +9,5 @@ class Mail():
     def send(self, subject, body):
         self.mail.login(self.email, self.password)
         content = "Subject: " + subject + "\n" + body
-        self.mail.sendmail(self.email, self.email, content)
+        self.mail.sendmail(self.email, "nappoa@yahoo.com", content)
         self.mail.close()
-email = Mail()
-email.send("This is a test subject", "this is a very nice test body paragraph. This will make up the content of the email!")
